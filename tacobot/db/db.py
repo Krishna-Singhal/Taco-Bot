@@ -36,7 +36,7 @@ class Database:
                 }
 
     def get_collection(self, name: str) -> Optional[Collection]:
-        if self.database:
+        if self.database is not None:
             return self.database[name]
         return None
 
