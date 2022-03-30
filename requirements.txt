@@ -1,0 +1,5 @@
+dnspython
+pymongo
+pyrogram
+tgcrypto
+python-dotenv
