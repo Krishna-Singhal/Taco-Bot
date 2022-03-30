@@ -4,6 +4,7 @@ from pyrogram.errors import ChannelPrivate
 
 from .. import strings
 from ..db import database
+from ..constants import constants
 
 
 async def bot_added_handler(_: Client, message: Message):
@@ -14,7 +15,7 @@ async def bot_added_handler(_: Client, message: Message):
         )
     try:
         await message.reply(
-            strings.BOT_ADDED_IN_GROUP_TEXT,
+            strings.BOT_ADDED_IN_GROUP_TEXT.format(constants.NEW_USER_TACOS),
             disable_web_page_preview=True
         )
     except ChannelPrivate:

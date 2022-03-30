@@ -56,7 +56,7 @@ async def incoming_message_handler(_: Client, message: Message):
         extra = choice(strings.DONATING_ENOUGH)
     out += "\n`{}`".format(extra)
     if other_text:
-        out += "\n**And Said:**\n**>>**: `{}`".format(other_text)
+        out += "\n**And Said:**\n**>>** `{}`".format(other_text)
     await message.reply(out,
                         disable_web_page_preview=True,
                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
