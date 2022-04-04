@@ -7,13 +7,14 @@ from ..db import database
 
 
 async def start(bot: Client, message: Message):
-    if not await checkUser(bot, message):
-        return await message.reply(
-            "You have not joined @Ks_Projects, join this channel and start again.",
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Join Now", url="https://t.me/Ks_Projects")]]
+    if message.chat.type == "private":
+        if not await checkUser(bot, message):
+            return await message.reply(
+                "You have not joined @Ks_Projects, join this channel and start again.",
+                reply_markup=InlineKeyboardMarkup(
+                    [[InlineKeyboardButton("Join Now", url="https://t.me/Ks_Projects")]]
+                )
             )
-        )
     chat_id = message.chat.id
     if message.chat.type == "private":
         if chat_id not in database.user_chats:
