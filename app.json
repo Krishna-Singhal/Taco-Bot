@@ -1,0 +1,37 @@
+{
+    "name": "Taco Bot",
+    "description": "Modular Telegram Bot for fun.",
+    "keywords": [
+        "telegram",
+        "bot",
+        "Taco",
+        "fun",
+        "entertainment"
+    ],
+    "repository": "https://github.com/Krishna-Singhal/Taco-Bot",
+    "website": "https://telegram.dog/ks_projects",
+    "env": {
+        "APP_ID": {
+            "description": "Get this value from my.telegram.org!"
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org!"
+        },
+        "BOT_TOKEN": {
+            "description": "Get it from @BotFather"
+        },
+        "DATABASE_URL": {
+            "description": "Get it from mongodb.com"
+        }
+    },
+    "buildpacks": [{
+        "url": "heroku/python"
+    }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "heroku-20"
+}
