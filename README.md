@@ -1,6 +1,6 @@
 # [Taco Bot](https://telegram.dog/KS_TacoBot)
 
-Taco Telegram bott to spread appreciation, celebrate, and have a little fun.
+Taco Telegram bot to spread appreciation, celebrate, and have a little fun.
 
 ---
 
