@@ -16,6 +16,7 @@ async def bot_added_handler(_: Client, message: Message):
     try:
         await message.reply(
             strings.BOT_ADDED_IN_GROUP_TEXT.format(constants.NEW_USER_TACOS),
+            reply_markup=strings.MARKUP,
             disable_web_page_preview=True
         )
     except ChannelPrivate:

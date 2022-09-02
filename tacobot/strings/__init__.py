@@ -1,3 +1,5 @@
+from pyrogram.types import InlineKeyboardMarkup as i, InlineKeyboardButton as b
+
 START_TEXT = """
 **Hello, my name is TacoBot and my sole purpose is to help you spread appreciation, celebrate, and have a little fun.**
 
@@ -24,6 +26,8 @@ From this moment I'm counting  all  tacos for  all  members in this chat. You ca
 
 `P.S. Again, only if you gave me access to messages❤️`
 """
+
+MARKUP = i([[b("Updates Channel 🔊", url="https://t.me/Ks_Projects"), b("Vote me 5 ⭐", url="https://t.me/BotsArchive/2383")]])
 
 TOP_TACOS_TEXT = "Here are the top-{} taco-owners of this chat!"
 MY_TACOS_TEXT = "{} **has `{}` taco{} on their taco-balance.**"

@@ -6,13 +6,13 @@ from ..utils import checkUser
 
 
 async def help(bot: Client, message: Message):
-    #if not await checkUser(bot, message):
-        #return await message.reply(
-            #"You have not joined @Ks_Projects, join this channel and start again.",
-            #reply_markup=InlineKeyboardMarkup(
-                #[[InlineKeyboardButton("Join Now", url="https://t.me/Ks_Projects")]]
-            #)
-        #)
+    if not await checkUser(bot, message):
+        return await message.reply(
+            "You have not joined @Ks_Projects, join this channel and start again.",
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton("Join Now", url="https://t.me/Ks_Projects")]]
+            )
+        )
     await message.reply(strings.HELP_TEXT,
                         disable_web_page_preview=True,
                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
